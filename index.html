@@ -186,10 +186,13 @@
       }
     ];
 
+    const DEFAULT_SUPABASE_URL = 'https://yqyaxbamwfizegtsusng.supabase.co';
+    const DEFAULT_SUPABASE_KEY = 'sb_publishable_Ct_1vDXcauDtXZYGtNUxQQ_m-6BrOul';
+
     function App() {
       // Supabase 설정 상태
-      const [supabaseUrl, setSupabaseUrl] = useState(() => localStorage.getItem('focusdo_sb_url') || '');
-      const [supabaseKey, setSupabaseKey] = useState(() => localStorage.getItem('focusdo_sb_key') || '');
+      const [supabaseUrl, setSupabaseUrl] = useState(() => localStorage.getItem('focusdo_sb_url') || DEFAULT_SUPABASE_URL);
+      const [supabaseKey, setSupabaseKey] = useState(() => localStorage.getItem('focusdo_sb_key') || DEFAULT_SUPABASE_KEY);
       const [isDbConnected, setIsDbConnected] = useState(false);
       const [dbSyncing, setDbSyncing] = useState(false);
 
